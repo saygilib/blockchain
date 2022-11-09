@@ -6,7 +6,7 @@ const blockchain = new Blockchain();
 const bodyParser = require("body-parser");
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/api/blocks", (req, res) => {
   res.json(blockchain.chain);
 });
